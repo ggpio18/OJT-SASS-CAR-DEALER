@@ -1,0 +1,226 @@
+@use '../abstract/' as *;
+@use '../base/' as *;
+@use '../component/' as *;
+@use '../layout/' as *;
+@use '../vendor/' as *;
+
+
+body{
+    background-color: $clr-primary;
+}
+
+.service{
+    &__wrapper{
+        background-color: $clr-section;
+        padding: 10rem;
+        .service__card{
+            text-align: center;
+            color: $clr-light;
+            h3{
+                color: $clr-light;
+                margin-bottom: 3rem;
+                height: 9rem;
+                border-bottom: 5px solid rgba($color: #555555, $alpha: 1.0);
+            }
+            i{
+                font-size: 5rem;
+                margin-bottom: 5rem;
+            }
+            p{
+                color: $clr-light;
+            }
+            button{
+                // display: inline-block;
+                margin-top: 49px;
+                padding: 16px 32px;
+                text-decoration: none;
+                font-family: 20px/18px "Ubuntu Condensed", Arial, sans-serif;
+                color: #fff;
+                background: #f8565d;
+                text-transform: uppercase;
+                font-weight: bolder;
+                margin-bottom: 1rem;
+            }
+            button:hover{
+                background: $clr-light;
+                color: $clr-dark;
+            }
+        }
+        @include mediaQuery{
+        @include grid(4);
+        gap: 5rem;
+        .service__card{
+            text-align: center;
+            color: $clr-light;
+            h3{
+                color: $clr-light;
+                margin-bottom: 3rem;
+                height: 6rem;
+                border-bottom: 3px solid rgba($color: #555555, $alpha: 1.0);
+            }
+            i{
+                font-size: 5rem;
+                margin-bottom: 5rem;
+            }
+            p{
+                color: $clr-light;
+            }
+            button{
+                display: inline-block;
+                margin-top: 49px;
+                padding: 16px 32px;
+                text-decoration: none;
+                font-family: 20px/18px "Ubuntu Condensed", Arial, sans-serif;
+                color: #fff;
+                background: #f8565d;
+                text-transform: uppercase;
+            }
+        }
+    }
+    }
+}
+.testimonial{
+    &__wrapper{
+        background-color: #f8565d;
+        padding: 5rem 5rem;
+        .testimonial__title{
+            h2{
+                color: $clr-light;
+                border-bottom: 1px solid $clr-light;
+            }
+        }
+    }
+}
+
+.about{
+    &__wrapper{
+        background-color: $clr-about;
+        padding: 7rem;
+        margin-bottom: 2rem;
+        @include mediaQuery{
+        @include grid(2);
+        gap: 3rem;
+        }
+       .about__left{
+        h2{
+            border-bottom: 1px solid #555555;
+             margin-top: 50px;
+            letter-spacing: -1px;
+            color: #f8565d;
+            }
+            .p-border{
+                padding: 1rem;
+                border-bottom: 1px solid #555555;
+            }
+            p{
+                margin-top: 33px;
+            }
+        }
+        .about__right{
+            h2{
+                border-bottom: 1px solid #555555;
+                margin-top: 50px;
+               letter-spacing: -1px;
+               color: #f8565d;
+               }
+               .p-border{
+                margin-top: 33px;
+                padding: 1rem;
+                border-bottom: 1px solid #555555;
+            }
+            .p-red{
+                color: $clr-accent;
+                padding: 1rem;
+                border-bottom: 1px solid #555555;
+            }
+            p{
+                margin-top: 7px;
+            }
+        }
+    }
+}
+
+// banner
+.cta{
+    &__wrapper{
+        background-color: $clr-section;
+        padding: 7rem;
+        @include grid(1);
+            .txt1{
+                font-size: 5rem;
+                @include mediaQuery{
+                font: 126px/110px 'Ubuntu Condensed', Arial, sans-serif;
+                }
+                color: #fff;
+                margin-top: 64px;
+                text-transform: uppercase;
+                letter-spacing: -4px;
+            }
+        .bottom{
+            padding: 0;
+            @include flex(flex-start);
+            gap: 2rem;
+        button{
+            display: inline-block;
+            margin-top: 49px;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-family: 20px/18px "Ubuntu Condensed", Arial, sans-serif;
+            font-weight: bolder;
+            color: #fff;
+            background: #f8565d;
+            text-transform: uppercase;
+        }
+        button:hover{
+            background: $clr-light;
+            color: $clr-dark;
+        }
+        i{
+            transform: translateY(6rem);
+            font-size: 4rem;
+            color: $clr-light;
+        }
+    }
+    }
+    @include mediaQuery{
+    &__wrapper{
+        background-color: $clr-section;
+        padding: 7rem;
+        @include grid(1);
+            .txt1{
+                font-size: 5rem;
+                @include mediaQuery{
+                font: 126px/110px 'Ubuntu Condensed', Arial, sans-serif;
+                }
+                color: #fff;
+                margin-top: 64px;
+                text-transform: uppercase;
+                letter-spacing: -4px;
+            }
+        .bottom{
+            padding: 0;
+            @include flex(flex-start);
+            gap: 2rem;
+        button{
+            display: inline-block;
+            margin-top: 49px;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-family: 20px/18px "Ubuntu Condensed", Arial, sans-serif;
+            color: #fff;
+            background: #f8565d;
+            text-transform: uppercase;
+        }
+        button:hover{
+            background: $clr-light;
+            color: $clr-dark;
+        }
+        i{
+            transform: translateY(5rem);
+            font-size: 4rem;
+            color: $clr-light;
+        }
+    }
+    }
+}
+}
